@@ -33,7 +33,7 @@ public class GeneratePresetImpl implements GeneratePreset {
                         numberOfUnits % rows,
                         numberOfUnits / rows
                 );
-                        armyList.add(copy);
+                armyList.add(copy);
                 points -= unit.getCost();
                 count += 1;
                 numberOfUnits += 1;

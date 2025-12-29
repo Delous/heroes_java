@@ -30,12 +30,14 @@ public class SuitableForAttackUnitsFinderImpl implements SuitableForAttackUnitsF
             for (int y = 0; y < 21; y++) {
                 if (grid.get(x).get(y) != null) {
                     if (isLeftArmyTarget) {
-                        if (x != 2 && grid.get(x+1).get(y) != null) {
+                        if (x == 2) result.add(grid.get(x).get(y));
+                        else if (grid.get(x+1).get(y) == null) {
                             result.add(grid.get(x).get(y));
                         }
                     }
                     else {
-                        if (x != 0 && grid.get(x-1).get(y) != null) {
+                        if (x == 0) result.add(grid.get(x).get(y));
+                        else if (grid.get(x-1).get(y) == null) {
                             result.add(grid.get(x).get(y));
                         }
                     }
